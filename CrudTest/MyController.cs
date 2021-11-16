@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Web.Core;
 
 namespace CrudTest
@@ -11,13 +9,24 @@ namespace CrudTest
     [Route("api/[controller]")]
     public class MyController : ControllerBase
     {
-        public IActionResult Get()
+        public IActionResult Get([FromServices] ExampleService exampleService)
         {
-            return Ok("Get");
+            return Ok(exampleService.Get);
         }
     }
 
     public class ConfigurationStartup : ServerlessBase
     {
-	}
+        public override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddSingleton<ExampleService>();
+
+            base.ConfigureServices(services, configuration);
+        }
+    }
+
+    public class ExampleService
+    {
+        public string Get => "example string";
+    }
 }

@@ -19,7 +19,7 @@ namespace WebApplicationTest
 			Configuration = configuration;
 			try
 			{
-				var dir = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Modules", "CrudTest.dll");
+				var dir = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CrudTest.dll");
 				assembly = Assembly.LoadFile(dir);
 				type = assembly.GetType("CrudTest.ConfigurationStartup");
 				if (type == null)
