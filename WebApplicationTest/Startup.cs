@@ -36,16 +36,17 @@ namespace WebApplicationTest
 		public IConfiguration Configuration { get; }
 		ServerlessBase serverless;
 
-		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices(IServiceCollection services)
-		{
-			services.AddSingleton(type);
-			serverless = services.BuildServiceProvider().GetRequiredService(type) as ServerlessBase;
 
+        // This method gets called by the runtime. Use this method to add services to the container.
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "ASP0000")]
+        public void ConfigureServices(IServiceCollection services)
+		{
 			services
 				.AddControllers()
 				.AddApplicationPart(assembly);
 
+			services.AddSingleton(type);
+			serverless = services.BuildServiceProvider().GetRequiredService(type) as ServerlessBase;
 			serverless.ConfigureServices(services, Configuration);
 		}
 
