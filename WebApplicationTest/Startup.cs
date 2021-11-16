@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Reflection;
 using Web.Core;
 
@@ -23,23 +26,23 @@ namespace WebApplicationTest
 				assembly = Assembly.LoadFile(dir);
 				type = assembly.GetType("CrudTest.ConfigurationStartup");
 				if (type == null)
-                {
+				{
 					Console.WriteLine("module not found");
 				}
 			}
-            catch (Exception e)
-            {
+			catch (Exception e)
+			{
 				Console.WriteLine("module not found");
-            }
+			}
 		}
 
 		public IConfiguration Configuration { get; }
 		ServerlessBase serverless;
 
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "ASP0000")]
-        public void ConfigureServices(IServiceCollection services)
+		// This method gets called by the runtime. Use this method to add services to the container.
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "ASP0000")]
+		public void ConfigureServices(IServiceCollection services)
 		{
 			services
 				.AddControllers()
