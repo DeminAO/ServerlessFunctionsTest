@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "WebApplicationTest": {
+      "commandName": "Executable",
+      "executablePath": ".\\WebApplicationTest.exe",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
