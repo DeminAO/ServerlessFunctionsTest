@@ -23,6 +23,7 @@ namespace WebApplicationTest
 					config
 						.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
 						.AddJsonFile("appsettings.json", false, true)
+						.AddJsonFile($"appsettings.ext.json", true, true)
 						.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
 						.AddEnvironmentVariables();
 				})

@@ -10,9 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{DD2E4319-9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationTest", "WebApplicationTest\WebApplicationTest.csproj", "{D0E65A8D-32FF-43D1-B481-2BB9AEC5935D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudTest", "CrudTest\CrudTest.csproj", "{171FF5EF-4AFC-4C90-992C-4187742534EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudTest", "CrudTest\CrudTest.csproj", "{171FF5EF-4AFC-4C90-992C-4187742534EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Core", "Web.Core\Web.Core.csproj", "{338344CA-9C0E-448C-9401-FAF801A1F6AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Core", "Web.Core\Web.Core.csproj", "{338344CA-9C0E-448C-9401-FAF801A1F6AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionTest", "FunctionTest\FunctionTest.csproj", "{497BE944-2043-45BA-9866-BE3F03929BB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{338344CA-9C0E-448C-9401-FAF801A1F6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{338344CA-9C0E-448C-9401-FAF801A1F6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{338344CA-9C0E-448C-9401-FAF801A1F6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{497BE944-2043-45BA-9866-BE3F03929BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{497BE944-2043-45BA-9866-BE3F03929BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{497BE944-2043-45BA-9866-BE3F03929BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{497BE944-2043-45BA-9866-BE3F03929BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
